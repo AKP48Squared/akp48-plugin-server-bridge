@@ -1,6 +1,6 @@
 {
   "name": "akp48-plugin-server-bridge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Allows AKP48 to bridge two channels chat to each other.",
   "main": "main.js",
   "scripts": {
