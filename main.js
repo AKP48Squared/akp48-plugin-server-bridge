@@ -25,7 +25,10 @@ class ServerBridge extends MessageHandlerPlugin {
     });
     this._AKP48.on('sendMsg', (to, msg, ctx) => {
       ctx.sending = true;
-      self.handleFull(msg, ctx);
+      //put in setTimeout to stop message from sending before whatever AKP48 is responding to.
+      setTimeout(() => {
+        self.handleFull(msg, ctx);
+      }, 100);
     });
   }
 }
