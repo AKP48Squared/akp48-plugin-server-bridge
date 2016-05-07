@@ -16,7 +16,7 @@ class ServerBridge extends MessageHandlerPlugin {
       this._config = {
         channels: {}
       };
-      this._config.channels[`${this._AKP48.getUUID()}|#exampleChannel`] = `${this._AKP48.getUUID()}|#exampleChannel2`;
+      this._config.channels[`${this._AKP48.getUUID()}|#exampleChannel`] = [`${this._AKP48.getUUID()}|#exampleChannel2`];
       this._AKP48.saveConfig(this._config, 'server-bridge');
     }
 
@@ -31,10 +31,10 @@ class ServerBridge extends MessageHandlerPlugin {
 }
 
 ServerBridge.prototype.handleFull = function (text, ctx) {
-  if(this._config.channels[`${ctx.instanceId}:${ctx.to}`]) {
-    var chans = this._config.channels[`${ctx.instanceId}:${ctx.to}`];
+  if(this._config.channels[`${ctx.instanceId}|${ctx.to}`]) {
+    var chans = this._config.channels[`${ctx.instanceId}|${ctx.to}`];
     for (let chan of chans) {
-      var c = chan.split(':');
+      var c = chan.split('|');
       if(c.length !== 2) { return; }
       var pref = `<${ctx.nick}> `;
       if(ctx.sending) {
