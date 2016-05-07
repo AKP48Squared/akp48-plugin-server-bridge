@@ -1,0 +1,23 @@
+{
+  "name": "akp48-plugin-server-bridge",
+  "version": "1.0.0",
+  "description": "Allows AKP48 to bridge two channels chat to each other.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "git checkout master && git pull && npm ls",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish"
+  },
+  "author": "Austin Peterson <austin@akpwebdesign.com> (http://akpwebdesign.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKP48Squared/akp48-plugin-server-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AKP48Squared/akp48-plugin-server-bridge/issues"
+  },
+  "homepage": "https://github.com/AKP48Squared/akp48-plugin-server-bridge"
+}
