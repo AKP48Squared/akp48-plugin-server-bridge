@@ -40,7 +40,7 @@ ServerBridge.prototype.handleFull = function (text, ctx) {
       if(ctx.sending) {
         pref = '';
       }
-      this._AKP48.sendMessage(`[${c[1]}] ${pref}${text}`, {instanceId: c[0], to: c[1], noPrefix: true});
+      this._AKP48.sendMessage(`[${ctx.to}] ${pref}${text}`, {instanceId: c[0], to: c[1], noPrefix: true});
     }
   }
 };
