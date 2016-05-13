@@ -1,7 +1,6 @@
 'use strict';
-const MessageHandlerPlugin = require('../../lib/MessageHandlerPlugin');
 
-class ServerBridge extends MessageHandlerPlugin {
+class ServerBridge extends global.AKP48.pluginTypes.MessageHandler {
   constructor(AKP48, config) {
     super('Server Bridge', AKP48);
     var self = this;
