@@ -126,3 +126,4 @@ ServerBridge.prototype.rmBridge = function (context) {
 };
 
 module.exports = ServerBridge;
+module.exports.type = 'MessageHandler';
