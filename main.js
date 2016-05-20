@@ -127,3 +127,4 @@ ServerBridge.prototype.rmBridge = function (context) {
 
 module.exports = ServerBridge;
 module.exports.type = 'MessageHandler';
+module.exports.pluginName = 'server-bridge';
