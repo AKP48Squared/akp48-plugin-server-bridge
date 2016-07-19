@@ -47,7 +47,7 @@ ServerBridge.prototype.handleFull = function (ctx) {
       }
 
       var sendCtx = new this._AKP48.Context({
-        instance: {id: c[0], name: 'ServerBridge'}, //TODO: Actually get the true instance here?
+        instance: {_id: c[0], _name: 'ServerBridge'}, //TODO: Actually get the true instance here?
         instanceType: 'ServerBridge',
         nick: 'ServerBridge',
         text: `[${ctx.to()}] ${pref}${ctx.text()}`,
