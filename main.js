@@ -11,7 +11,7 @@ class ServerBridge extends global.AKP48.pluginTypes.MessageHandler {
       'AKP48.op'
     ];
 
-    if(!this._config) {
+    if(!this._config.channels) {
       this._config = {
         channels: {}
       };
