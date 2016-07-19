@@ -26,6 +26,7 @@ class ServerBridge extends global.AKP48.pluginTypes.MessageHandler {
     });
 
     this._AKP48.on('logMsg', (ctx) => {
+      if(ctx.getCustomData('server-bridge-pls-ignore')) {return;} //drop request if it was from us.
       ctx.setCustomData('server-bridge-sending', true);
       //handle message on next tick, to let the event queue finish first.
       process.nextTick(() => {
@@ -59,6 +60,7 @@ ServerBridge.prototype.handleFull = function (ctx) {
       });
 
       sendCtx.setCustomData('noPrefix', true);
+      sendCtx.setCustomData('server-bridge-pls-ignore', true);
 
       this._AKP48.sendMessage(sendCtx);
     }
