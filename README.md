@@ -2,7 +2,8 @@ This plugin allows AKP48 to bridge two channels to each other.
 
 # Installation
 
-This plugin is included by default on new installations of AKP48Squared. No additional installation is required.
+Step 1: `git clone` this repo into your AKP48Squared plugins directory (See the AKP48Squared documentation for more details).
+Step 2: Restart or reload the bot.
 
 # Commands
 
@@ -18,7 +19,7 @@ Required Permissions: `['AKP48.owner', 'AKP48.op', 'irc.channel.owner', 'irc.cha
 
 # Config
 
-server-bridge stores all of its configuration in the main config.json file for AKP48.
+server-bridge stores all of its configuration in the plugins section of the main config.json file for AKP48.
 
 # Issues
 
